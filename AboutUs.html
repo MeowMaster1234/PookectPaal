@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabulous PocketPaal Website</title>
+   <!--<a href="#about" class="btn">Mehr über uns</a><link rel="stylesheet" href="ody.css"> --> 
+</head>
+<body>
+    <header>
+        <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center container contents */
+    align-items: center;
+    flex-direction: column; /* Stack logo and navigation vertically */
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo links ausrichten */
+.container img {
+    order: 1;
+}
+
+/* Navigation rechts neben das Logo platzieren */
+nav {
+    order: 2;
+}
+
+/* Burger nur bei kleinen Bildschirmen anzeigen */
+.burger {
+    display: none;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}  
+
+.nav-links a,
+.nav-links a:visited {
+    color: #fff; /* Einheitliche Farbe für Links */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section Styling */
+.hero-section,.contact-section {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    width: 100%;
+}
+
+.hero-section h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    padding: 0 20px;
+}
+.contact-section p
+{
+    font-size: 1.1rem;
+    padding: 0 20px;
+}
+.contact-section {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.divider {
+    border: 0;
+    height: 2px;
+    background-color: #ffffff66;
+    width: 99%;
+    margin: 40px auto;
+    
+}
+
+/* Section Layout */
+.sectionleft, .sectionright {
+    width: 80%;
+    max-width: 1000px;
+    margin: 40px auto; /* Center the sections */
+    text-align: center; /* Center text within the section */
+    padding: 20px; /* Add padding for indentation */
+}
+
+.sectionleft h3, .sectionright h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center the section headings */
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.sectionleft .content {
+    flex-direction: row; /* Left section: Image on left, text on right */
+}
+
+.sectionright .content {
+    flex-direction: row-reverse; /* Right section: Text on left, image on right */
+}
+
+
+
+.text-boxLEFT, .text-boxRIGHT {
+    flex: 2;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    /* Header Styling */
+
+    .container img {
+        content: url(Transparent.png);
+        width: 0px;
+        align-items: left;
+        max-width: 90px; /* Reduce max-width for smaller screens */
+    }
+    .sectionleft .content,
+    .sectionright .content {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: center; /* Center content */
+    }
+
+    .picture-boxLEFT, .picture-boxRIGHT {
+        order: 1; /* Image first */
+    }
+
+    .text-boxLEFT, .text-boxRIGHT {
+        order: 2; /* Text second, below the image */
+        text-align: center; /* Center text for better mobile visibility */
+        margin-top: 10px; /* Add some space above text */
+    }
+
+    .footer-left, .footer-middle, .footer-right {
+        width: 100%;
+    }
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    
+}
+
+.burger span {
+    display: block;
+    width: 46px;
+    height: 8px;
+    margin: 5px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 600px) {
+    /* Small logo centered, burger menu on the right */
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .container img {
+        content: url(Transparent.png); /* Load smaller logo */
+        max-width: 90px; /* Adjust size for smaller screens */
+        margin: auto;
+    }
+
+    .nav-links {
+        display: none; /* Hide main navigation */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background-color: #333;
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Burger menu active state */
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 30%;
+    margin: 10px 0;
+}
+
+.footer-left h4, .footer-middle ul, .footer-right ul {
+    margin-bottom: 15px;
+}
+
+.footer-middle ul, .footer-right ul {
+    list-style: none;
+}
+
+.footer-middle ul li, .footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-middle ul li a, .footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle ul li a:hover, .footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 7px;
+    
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    padding: 0.8rem;
+}
+
+        </style>
+        <div class="container">
+            <img src="bruh.png" alt="PocketPaal Logo" style="width:450px; height:auto; display: block; margin: auto;">
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Produkte_index.html">Produkte</a></li>
+                    <li><a href="HowToBuy.html">Kaufoptionen</a></li>
+                    <li><a href="AboutUs.html">Über Uns</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                    
+                </ul>
+                
+            </nav>
+            <div class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </header>
+
+   
+         <!-- Content Sections -->
+       <div class="sectionleft">
+        <h3>Wir sind Poocketpal</h3>
+        <div class="content">
+            <div class="picture-boxLEFT">
+                <a href="https://www.instagram.com/reel/DBi1ou6O_pQ/?igsh=MXJ5Y2htdzhoN2tnbA"><img src="20241114_152246.jpg" alt="Produkt1"style="width:400px;"></a>
+            </div>
+            <div class="text-boxLEFT">
+                <p> Das Team besteht aus fünf engagierten Mitgliedern, die jeweils spezifische Aufgaben und Verantwortungen übernehmen:
+                    Elias Eder fungiert als Teamführer und sorgt für eine effektive Teamkommunikation. Er unterstützt das Team in allen Aufgabenbereichen. Magdalena Topal ist als Kundenbeauftragte tätig und kümmert sich um den Kundenservice, die Erstellung von Präsentationen, die Betreuung der Social-Media-Kanäle sowie den Verkauf. Eneas Zückerstätter bringt seine vielseitigen Fähigkeiten als Webseitendesigner ein und gestaltet beeindruckende Weblösungen. Moritz Wieland ist für die Finanzen und Buchhaltung zuständig und gewährleistet eine reibungslose Finanzverwaltung. Melih Temur übernimmt die Verantwortung für die Produktion und stellt sicher, dass die Card Holder in höchster Qualität hergestellt werden.
+                </p>
+                <ul>
+                    <li>Magdalena Topal – Kundenbeauftragte</li>
+                    <li>Eneas Zückerstätter – Webseitendesigner</li>
+                    <li>Moritz Wieland – Finanzen und Buchhaltung</li>
+                    <li>Melih Temur – Produktion</li>
+                    <li>Elias Eder – Teamführer</li>
+                  </ul>
+            </div>
+            
+        </div>
+    </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-left">
+            <h4>Pooket PAAL</h4>
+            <p>Davisstraße 5<br>5400 Hallein</p>
+            <p>Raum 311</p>
+            <p>Tel. +43 0650 6705575</p>
+            <p>E-Mail: <a href="mailto:poocketpal@gmail.com" poocketpal@gmail.com</a></p>
+                <div class="social-icons">
+                    <a href="https://www.tiktok.com/@poocketpal"><img src="TIKTOK.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/poocketpal/profilecard/?igsh=cTk1OG9tYWc3NXpn"><img src="intagram.png" alt="Instagram"></a>
+                </div>
+        </div>
+
+
+
+        <div class="footer-right">
+            <ul>
+                <li><a href="Produkte.html">Produkte</a></li>
+                <li><a href=".html">Kaufoptionen</a></li>
+                <li><a href="AboutUs.html">Über Uns</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+           
+        </div>
+    </div>
+    
+</footer>
+ <script src="script.js"></script>
+</body>
+
+</html>

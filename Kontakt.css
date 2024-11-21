@@ -1,0 +1,191 @@
+/* body.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #333;
+    line-height: 1.6;
+}  
+a {
+    color: white;               /* Sets hyperlink text color to white */
+    text-decoration: underline;  /* Adds underline */
+  }
+.container {
+    justify-content: center;
+    align-items: center;
+    height: 9vh; /* Passt Höhe an Bildschirmgröße an */
+}
+
+header {
+    background-color: #000000; /* Change this to your preferred color */
+    padding: 10px 0;
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 10rem;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 15px;
+    text-align: center;
+}
+.divider {
+    border: 0; /* Entfernt Standardrahmen */
+    height: 2px; /* Höhe des Trennstrichs */
+    background-color: #ffffff; /* Farbe des Trennstrichs */
+    margin: 40px 0; /* Abstand oberhalb und unterhalb erhöhen, z.B. auf 40px */
+    width: 80%; /* Breite des Trennstrichs (optional) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    margin-left: 20px;
+}
+
+.hero-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 15px; /* Abstand nach unten verkleinern */
+    padding: 0 90px; /* Optional: Horizontaler Einzug nach Bedarf */
+}
+.hero-section .small-hero-text {
+    font-size: 1.1rem; /* Setze hier eine kleinere Größe, z.B. 1rem oder 0.9rem */
+}
+.btn {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+.about-section, .services-section, .contact-section {
+    padding: 50px 0;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+}
+.kontakt-section {
+    margin-left: 0px; /* Same adjustment */
+}
+.about-section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-middle, .footer-right {
+    width: 30%;
+}
+
+.footer-left h4, .footer-middle ul, .footer-right ul {
+    margin-bottom: 15px;
+}
+
+.footer-middle ul, .footer-right ul {
+    list-style: none;
+}
+
+.footer-middle ul li, .footer-right ul li {
+    margin-bottom: 10px;
+}
+
+.footer-middle ul li a, .footer-right ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-middle ul li a:hover, .footer-right ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+.item-contents {
+    display: flex;
+    align-items: center;
+}
+
+.item-contents i {
+    margin-right: 10px; /* Abstand zwischen Icon und Text */
+}
